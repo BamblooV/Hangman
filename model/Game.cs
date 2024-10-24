@@ -81,12 +81,16 @@ namespace Hangman.model
             if (lives == 0)
             {
                 Console.WriteLine("Game over");
+                Console.WriteLine($"Correct word is {word}");
             }
 
             if (rightLettersCounter == lettersToGuessCount)
             {
                 Console.WriteLine("You win");
             }
+
+            Console.WriteLine("\nEnter any key to back to menu");
+            Console.ReadKey();
         }
     }
 }
