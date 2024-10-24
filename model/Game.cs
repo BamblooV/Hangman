@@ -2,7 +2,6 @@
 
 namespace Hangman.model
 {
-
     internal class Game
     {
         const int MAX_LIVES = 5;
