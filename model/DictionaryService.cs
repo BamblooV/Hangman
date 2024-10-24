@@ -1,5 +1,4 @@
-﻿using System.IO;
-using System.Reflection;
+﻿using System.Reflection;
 using System.Text;
 
 namespace Hangman.model
@@ -54,7 +53,7 @@ namespace Hangman.model
             }
             catch
             {
-                Console.WriteLine("Failed to load resources");
+                Console.WriteLine("Ее удалось загрузить словарик из ресурсов.");
             }
         }
 

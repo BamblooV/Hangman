@@ -61,7 +61,7 @@
 
         private void DrawGuessedLetters(List<char> guessedLetters)
         {
-            Console.Write("Guessed letters: ");
+            Console.Write("Предположенные буквы: ");
             foreach (var letter in guessedLetters)
             {
                 Console.Write($"{letter} ");
@@ -106,7 +106,7 @@
 
         public void PrintPrompt()
         {
-            Console.Write("\nGuess a letter: ");
+            Console.Write("\nВведи букву: ");
         }
     }
 }

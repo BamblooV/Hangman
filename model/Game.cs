@@ -32,12 +32,12 @@ namespace Hangman.model
             {
                 if (!isLetter)
                 {
-                    Console.WriteLine($"\n{pressedKey} is not character.");
+                    Console.WriteLine($"\n{pressedKey} не буква.");
                 }
 
                 if (isAlreadyUsed)
                 {
-                    Console.WriteLine($"\n{pressedKey} was already used. Try another one.");
+                    Console.WriteLine($"\n{pressedKey} уже была использована. Попробуй другую.");
                 }
 
                 view.PrintPrompt();
@@ -80,16 +80,16 @@ namespace Hangman.model
 
             if (lives == 0)
             {
-                Console.WriteLine("Game over");
-                Console.WriteLine($"Correct word is {word}");
+                Console.WriteLine("Вы проиграли");
+                Console.WriteLine($"Загаданное слово это {word}");
             }
 
             if (rightLettersCounter == lettersToGuessCount)
             {
-                Console.WriteLine("You win");
+                Console.WriteLine("Вы победили");
             }
 
-            Console.WriteLine("\nEnter any key to back to menu");
+            Console.WriteLine("\nНажмите людую кнопку, чтобы вернуться в меню.");
             Console.ReadKey();
         }
     }
