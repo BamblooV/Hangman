@@ -1,4 +1,5 @@
-﻿namespace Hangman.view
+﻿
+namespace Hangman.view
 {
     internal class ConsoleRenderer : IView
     {
@@ -66,6 +67,12 @@
             {
                 Console.Write($"{letter} ");
             }
+            Console.WriteLine();
+        }
+
+        private void PrintHealth(int health)
+        {
+            Console.WriteLine($"Оставшееся число жизней: {health}");
         }
 
         private void PrintWord(string word, List<char> guessedLetters)
@@ -81,6 +88,8 @@
                     Console.Write("  ");
                 }
             }
+
+            Console.WriteLine();
         }
 
         private void PrintDashes(int wordLength)
@@ -92,17 +101,18 @@
             }
         }
 
-        public void PrintFrame(int frameNumber, string word, List<char> guessedLetters)
+        public void PrintFrame(int frameNumber, int health, string word, List<char> guessedLetters)
         {
             Console.Clear();
             PrintHangman(frameNumber);
-            Console.WriteLine();
+            PrintHealth(health);
             DrawGuessedLetters(guessedLetters);
-            Console.WriteLine();
             PrintWord(word, guessedLetters);
             Console.WriteLine();
             PrintDashes(word.Length);
         }
+
+        
 
         public void PrintPrompt()
         {

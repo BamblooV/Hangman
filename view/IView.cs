@@ -2,8 +2,7 @@
 {
     internal interface IView
     {
-
-        public void PrintFrame(int frameNumber, string word, List<char> guessedLetters);
+        public void PrintFrame(int frameNumber, int health, string word, List<char> guessedLetters);
 
         public void PrintPrompt();
     }

@@ -51,7 +51,7 @@ namespace Hangman.model
 
         private void MakeTurn()
         {
-            view.PrintFrame(MAX_LIVES - lives, word, guessedChars);
+            view.PrintFrame(MAX_LIVES - lives, lives, word, guessedChars);
             view.PrintPrompt();
 
             var pressedKey = ReadLetter();
@@ -75,7 +75,7 @@ namespace Hangman.model
                 MakeTurn();
             }
 
-            view.PrintFrame(MAX_LIVES - lives, word, guessedChars);
+            view.PrintFrame(MAX_LIVES - lives, lives, word, guessedChars);
             Console.WriteLine();
 
             if (lives == 0)
