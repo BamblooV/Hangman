@@ -2,16 +2,16 @@
 
 ![Demo](./docs/demo.png)
 
-[Техническое задание](https://zhukovsd.github.io/java-backend-learning-course/projects/hangman/)
+[РўРµС…РЅРёС‡РµСЃРєРѕРµ Р·Р°РґР°РЅРёРµ](https://zhukovsd.github.io/java-backend-learning-course/projects/hangman/)
 
-## Локальный запуск
+## Р›РѕРєР°Р»СЊРЅС‹Р№ Р·Р°РїСѓСЃРє
 
 ```bash
 git clone git@github.com:BamblooV/Hangman.git
 cd Hangman
 ```
 
-## Билд
+## Р‘РёР»Рґ
 
 ```bash
 ./bin/Release/net8.0/Hangman.exe
