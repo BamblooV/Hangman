@@ -1,4 +1,4 @@
-﻿namespace Hangman.model
+﻿namespace Hangman.game.model
 {
     internal abstract class Vocabulary : IVocabulary
     {

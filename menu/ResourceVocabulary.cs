@@ -1,7 +1,8 @@
 ﻿using System.Reflection;
 using System.Text;
+using Hangman.game.model;
 
-namespace Hangman.model
+namespace Hangman.menu
 {
     internal class ResourceVocabulary : Vocabulary, IVocabulary
     {
@@ -20,7 +21,7 @@ namespace Hangman.model
                     {
                         var sanitizedWord = word.Trim().ToLower();
 
-                        if (String.IsNullOrEmpty(sanitizedWord)) continue;
+                        if (string.IsNullOrEmpty(sanitizedWord)) continue;
 
                         words.Add(sanitizedWord);
                     }

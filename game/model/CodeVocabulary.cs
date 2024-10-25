@@ -1,8 +1,8 @@
-﻿namespace Hangman.model
+﻿namespace Hangman.game.model
 {
     internal class CodeVocabulary : Vocabulary, IVocabulary
     {
-        private CodeVocabulary()
+        public CodeVocabulary()
         {
             words = new List<string>([
                 "библиотека",
