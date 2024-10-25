@@ -1,4 +1,5 @@
-﻿using Hangman.model;
+﻿using Hangman.game.controller;
+using Hangman.game.model;
 
 namespace Hangman.menu.commands
 {
@@ -6,7 +7,18 @@ namespace Hangman.menu.commands
     {
         public void Execute(Menu context)
         {
-            new Game().StartGame();
+            IVocabulary vocabulary;
+
+            try
+            {
+                vocabulary = new ResourceVocabulary();
+            }
+            catch (NullReferenceException e)
+            {
+                vocabulary = new CodeVocabulary();
+            }
+
+            new GameController(vocabulary).StartGame();
         }
     }
 }

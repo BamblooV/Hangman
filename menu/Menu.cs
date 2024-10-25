@@ -9,6 +9,12 @@ namespace Hangman.menu
 
         public bool isRunning = true;
 
+        private void AddCommand(ICommand command, string description)
+        {
+            commands.Add(command);
+            commandDescriptions.Add(command, description);
+        }
+
         public Menu()
         {
             AddCommand(new StartGameCommand(), "Начать игру");
@@ -30,7 +36,7 @@ namespace Hangman.menu
             while (true)
             {
                 var userInput = Console.ReadKey();
-                if (Int32.TryParse(userInput.ToString(), out commandIndex))
+                if (Int32.TryParse(userInput.KeyChar.ToString(), out commandIndex))
                 {
                     if (commandIndex > commands.Count || commandIndex < 1)
                     {
@@ -53,12 +59,6 @@ namespace Hangman.menu
             PrintCommands();
             var commandIndex = ReadCommandIndex() - 1;
             commands[commandIndex].Execute(this);
-        }
-
-        private void AddCommand(ICommand command, string description)
-        {
-            commands.Add(command);
-            commandDescriptions.Add(command, description);
         }
 
         public void Start()
