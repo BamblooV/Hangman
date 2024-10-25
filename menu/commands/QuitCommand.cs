@@ -4,7 +4,7 @@
     {
         public void Execute(Menu context)
         {
-            context.isRunning = false;
+            context.Stop();
         }
     }
 }

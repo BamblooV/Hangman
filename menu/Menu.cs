@@ -1,4 +1,6 @@
-﻿using Hangman.menu.commands;
+﻿using Hangman.game.controller;
+using Hangman.game.model;
+using Hangman.menu.commands;
 
 namespace Hangman.menu
 {
@@ -63,10 +65,31 @@ namespace Hangman.menu
 
         public void Start()
         {
+            isRunning = true;
             while (isRunning)
             {
                 SelectCommand();
             }
+        }
+        public void Stop()
+        {
+            isRunning = false;
+        }
+
+        public void StartHangmanGame()
+        {
+            IVocabulary vocabulary;
+
+            try
+            {
+                vocabulary = new ResourceVocabulary();
+            }
+            catch (NullReferenceException e)
+            {
+                vocabulary = new CodeVocabulary();
+            }
+
+            new GameController(vocabulary).StartGame();
         }
     }
 }
