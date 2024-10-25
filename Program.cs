@@ -1,4 +1,4 @@
-﻿using Hangman.controller;
+﻿using Hangman.menu;
 
 namespace Hangman
 {
@@ -6,9 +6,7 @@ namespace Hangman
     {
         static void Main(string[] args)
         {
-            var controller = new HangmanController();
-
-            controller.Bootstrap();
+            (new Menu()).Start();
         }
     }
 }
